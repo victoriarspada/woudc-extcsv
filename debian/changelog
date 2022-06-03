@@ -1,3 +1,10 @@
+woudc-extcsv (0.4.0) unstable; urgency=low
+
+  * swap in woudc-data-registry extended csv parser
+  * make corresponding changes to Reader and Writer classes
+
+ -- WOUDC <ec.woudc.ec@canada.ca>  Mon, 20 Jun 2022 13:12:29 +0000
+
 woudc-extcsv (0.3.1) unstable; urgency=low
 
   * bump for packaging
