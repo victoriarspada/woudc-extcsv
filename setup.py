@@ -18,7 +18,7 @@
 # those files. Users are asked to read the 3rd Party Licenses
 # referenced with those assets.
 #
-# Copyright (c) 2015 Government of Canada
+# Copyright (c) 2022 Government of Canada
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -83,10 +83,6 @@ def get_package_version():
     raise RuntimeError('Unable to find version string.')
 
 
-# set dependencies
-with open('requirements.txt') as ff:
-    INSTALL_REQUIRES = [line.strip() for line in ff]
-
 KEYWORDS = [
     'woudc',
     'ozone',
@@ -124,9 +120,8 @@ setup(
     maintainer=CONTACT,
     maintainer_email=EMAIL,
     url=URL,
-    install_requires=INSTALL_REQUIRES,
     packages=find_packages('.'),
-    package_data={'woudc_extcsv': ['table_configuration.csv']},
+    package_data={'woudc_extcsv': ['tables-schema.json', 'tables-backfilling.yml', 'errors-backfilling.csv']},
     scripts=SCRIPTS,
     classifiers=[
         'Development Status :: 4 - Beta',
