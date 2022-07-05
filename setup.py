@@ -126,7 +126,10 @@ setup(
     url=URL,
     install_requires=INSTALL_REQUIRES,
     packages=find_packages('.'),
-    package_data={'woudc_extcsv': ['tables-schema.json', 'tables-backfilling.yml', 'errors-backfilling.csv']},
+    package_data={
+        'woudc_extcsv': ['tables-schema.json', 'tables-backfilling.yml',
+                         'errors-backfilling.csv']
+    },
     scripts=SCRIPTS,
     classifiers=[
         'Development Status :: 4 - Beta',
