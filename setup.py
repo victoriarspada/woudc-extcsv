@@ -83,6 +83,10 @@ def get_package_version():
     raise RuntimeError('Unable to find version string.')
 
 
+# set dependencies
+with open('requirements.txt') as ff:
+    INSTALL_REQUIRES = [line.strip() for line in ff]
+
 KEYWORDS = [
     'woudc',
     'ozone',
@@ -120,6 +124,7 @@ setup(
     maintainer=CONTACT,
     maintainer_email=EMAIL,
     url=URL,
+    install_requires=INSTALL_REQUIRES,
     packages=find_packages('.'),
     package_data={'woudc_extcsv': ['tables-schema.json', 'tables-backfilling.yml', 'errors-backfilling.csv']},
     scripts=SCRIPTS,
